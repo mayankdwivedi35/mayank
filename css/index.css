@@ -1,0 +1,29 @@
+
+.nav-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.nav-content .brand-text {
+    color: #fff;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-top: 1rem;
+    font-weight: 400;
+}
+header {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(
+            to bottom right,
+            rgba(0, 0, 0, 0.8),
+            rgba(0, 0, 0, 0.5)
+        ),
+        url("./img_src/index_header.jpg") center/cover;
+}

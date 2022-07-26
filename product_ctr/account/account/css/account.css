@@ -1,0 +1,78 @@
+*{
+    margin: 0%;
+    font-family: sans-serif;
+}
+.nav_click {
+    height: 40px;
+    position: sticky;
+    top: 0px;
+    left: 0px;
+    background-color: none;
+    display: flex;
+    justify-content: space-between;
+    background-color: #eee;
+  }
+  .nav_click_box{
+    font-size: 25px;
+    padding: 4px 4px 0px 8px;
+    border-radius: 8px;
+    margin: 2px;
+  }
+  .user_1{
+      display: flex;
+  }
+  .user_profile_img, .user_profile_img img{
+      height: 80px;
+      width: 80px;
+      border-radius: 50%;
+      margin: 4px;
+  }
+  .user_deta{
+      border-left: 2px solid #eee;
+      margin: 2px 0px 0px 15px;
+      padding: 10px 0px 0px 15px;
+  }
+  .user_deta h3{
+      margin-bottom: 8px;
+  }
+  .user_deta p{
+      font-size: 12px;
+  }
+  .container {
+    position: relative;
+    display: none;
+    margin-top: 10px;
+  }
+  .container img{
+      max-width: 468px;
+      border-radius: 8px;
+      box-shadow: 4px 0px 8px 1px #555;
+  }
+  .closebtn {
+    position: absolute;
+    top: 10px;
+    right: 5px;
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    font-weight: 900;
+    cursor: pointer;
+  }
+  #imgtext {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+  }
+  #head_pub{
+    margin-left: 10px;
+    margin-top: 20px;
+    color: #555;
+  }
+  @media (min-width:420px) {
+      .closebtn {
+        position: fixed;
+        top: 135px;
+        left: 420px;
+      }
+  }

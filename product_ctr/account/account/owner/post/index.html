@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>post your add</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="upload_nav">
+        <div class="upload_nav_box">Mark as Unavailable or booked </div>
+        <div class="upload_nav_box" id="confirm_btn">Confirm </div>
+        <div class="upload_nav_box" id="cancle_btn">Cancle </div>
+    </div>
+    <div class="main_full_box">
+        <form action="" method="post" enctype="multipart/form-data">
+            <div class="form_top1">
+                <div class="form_top_box">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-25">
+                                <label for="fname">Full Name</label>
+                            </div>
+                            <div class="col-75">
+                                <input type="text" id="fname" name="name" placeholder="Ex: Nishant bhagat">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-25">
+                                <label for="lname">Phone Number</label>
+                            </div>
+                            <div class="col-75">
+                                <input type="number" id="lname" name="mobile" placeholder="Without +91">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-25">
+                                <label for="add1">Address</label>
+                            </div>
+                            <div class="col-75">
+                                <input type="text" id="add1" name="add1" placeholder="Local area name">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-25">
+                                <label for="add2">City/town</label>
+                            </div>
+                            <div class="col-75">
+                                <input type="text" id="add2" name="add2" placeholder="Your city name">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-25">
+                                <label for="add3">Landmark</label>
+                            </div>
+                            <div class="col-75">
+                                <input type="text" id="add3" name="add3" placeholder="Ex: near city mall">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-25">
+                                <label for="pin">Pin code</label>
+                            </div>
+                            <div class="col-75">
+                                <input type="text" id="pin" name="pin" placeholder="Pin code X X X X X X">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-25">
+                                <label for="type">Type</label>
+                            </div>
+                            <div class="col-75">
+                                <select id="type" name="type">
+                                    <option value="All Type">All rooms</option>
+                                    <option value="pg">PG</option>
+                                    <option value="Room">Room</option>
+                                    <option value="hostel">Hostel</option>
+                                    <option value="flat">Flat</option>
+                                </select>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="form_top_box">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-25">
+                                <label for="price">Price</label>
+                            </div>
+                            <div class="col-75">
+                                <input type="number" id="price" name="price" placeholder="Your Rent Price">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-25">
+                                <label for="price_type">Rent type</label>
+                            </div>
+                            <div class="col-75">
+                                <select id="price_type" name="price_type">
+                                    <option value="Per months">Per months</option>
+                                    <option value="Per year">Per year</option>
+                                    <option value="Per day">Per day</option>
+                                    <option value="Per Week">Per Week</option>
+                                    <option value="Per hour">Per hour</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-25">
+                                <label for="gen">Gender</label>
+                            </div>
+                            <div class="col-75">
+                                <select id="gen" name="gen">
+                                    <option value="Boys">Boys</option>
+                                    <option value="Girls">Girls</option>
+                                    <option value="Girls">Family</option>
+                                    <option value="All">All</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-25">
+                                <label for="description">Details</label>
+                            </div>
+                            <div class="col-75">
+                                <textarea id="description" name="description" placeholder="Write description..."
+                                    style="height:100px"></textarea>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-25">
+                                <label for="rule">Rule & Guidlines</label>
+                            </div>
+                            <div class="col-75">
+                                <textarea id="rule" name="rule" placeholder="rule and guidlines for rent"
+                                    style="height:100px"></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="image_container">
+                <h3>Minimum 1 image required</h3>
+                <div class="upload_main_div">
+
+                    <div class="upload_box">
+                        <p><input type="file" accept="image/*" name="img1" id="file" onchange="loadFile(event)"
+                                style="display: none;"></p>
+                        <p class="upload_image"><label for="file" style="cursor: pointer;">Image 1</label></p>
+                        <label for="file">
+                            <div class="bg">
+                                <p><img id="output" /></p>
+                            </div>
+                        </label>
+                        <script>
+                            var loadFile = function (event) {
+                                var image = document.getElementById('output');
+                                image.src = URL.createObjectURL(event.target.files[0]);
+                            };
+                        </script>
+                    </div>
+
+                    <div class="upload_box">
+                        <p><input type="file" accept="image/*" name="img2" id="file2" onchange="loadFile2(event)"
+                                style="display: none;"></p>
+                        <p class="upload_image"><label for="file2" style="cursor: pointer;">Image 2</label></p>
+                        <label for="file2">
+                            <div class="bg">
+                                <p><img id="output2" /></p>
+                            </div>
+                        </label>
+                        <script>
+                            var loadFile2 = function (event) {
+                                var image2 = document.getElementById('output2');
+                                image2.src = URL.createObjectURL(event.target.files[0]);
+                            };
+                        </script>
+                    </div>
+
+                    <div class="upload_box">
+                        <p><input type="file" accept="image/*" name="img3" id="file3" onchange="loadFile3(event)"
+                                style="display: none;"></p>
+                        <p class="upload_image"><label for="file3" style="cursor: pointer;">Image 3</label></p>
+                        <label for="file3">
+                            <div class="bg">
+                                <p><img id="output3" /></p>
+                            </div>
+                        </label>
+                        <script>
+                            var loadFile3 = function (event) {
+                                var image3 = document.getElementById('output3');
+                                image3.src = URL.createObjectURL(event.target.files[0]);
+                            };
+                        </script>
+                    </div>
+
+                    <div class="upload_box">
+                        <p><input type="file" accept="image/*" name="img4" id="file4" onchange="loadFile4(event)"
+                                style="display: none;"></p>
+                        <p class="upload_image"><label for="file4" style="cursor: pointer;">Image 4</label></p>
+                        <label for="file4">
+                            <div class="bg">
+                                <p><img id="output4" /></p>
+                            </div>
+                        </label>
+                        <script>
+                            var loadFile4 = function (event) {
+                                var image4 = document.getElementById('output4');
+                                image4.src = URL.createObjectURL(event.target.files[0]);
+                            };
+                        </script>
+                    </div>
+
+                    <div class="upload_box">
+                        <p><input type="file" accept="image/*" name="img5" id="file5" onchange="loadFile5(event)"
+                                style="display: none;"></p>
+                        <p class="upload_image"><label for="file5" style="cursor: pointer;">Image 5</label></p>
+                        <label for="file5">
+                            <div class="bg">
+                                <p><img id="output5" /></p>
+                            </div>
+                        </label>
+                        <script>
+                            var loadFile5 = function (event) {
+                                var image5 = document.getElementById('output5');
+                                image5.src = URL.createObjectURL(event.target.files[0]);
+                            };
+                        </script>
+                    </div>
+
+                    <div class="upload_box">
+                        <p><input type="file" accept="image/*" name="img6" id="file6" onchange="loadFile6(event)"
+                                style="display: none;"></p>
+                        <p class="upload_image"><label for="file6" style="cursor: pointer;">Image 6</label></p>
+                        <label for="file6">
+                            <div class="bg">
+                                <p><img id="output6" /></p>
+                            </div>
+                        </label>
+                        <script>
+                            var loadFile6 = function (event) {
+                                var image6 = document.getElementById('output6');
+                                image6.src = URL.createObjectURL(event.target.files[0]);
+                            };
+                        </script>
+                    </div>
+
+
+
+                </div>
+            </div>
+            <div class="submit">
+                <input type="submit" value="Continue">
+            </div>
+            <div class="gap"></div>
+        </form>
+    </div>
+</body>
+
+</html>
