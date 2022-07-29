@@ -1,7 +1,11 @@
 <?php
 session_start();
-if (!isset($_SESSION['u1'])) {
-    header("location: login.php");
+if (!isset($_SESSION['number'])) {
+    echo "you are not login";
+    // header("location: login.php");
+}
+else{
+    echo "success";
 }
 
 $servername = "localhost";
@@ -32,7 +36,6 @@ $name = "$fname $lname";
     <link rel="stylesheet" href="./product_css/dashboard.css">
     <script src="https://kit.fontawesome.com/6134d4c766.js" crossorigin="anonymous"></script>
 </head>
-new code
 
 <body>
     <div class="nav_click">

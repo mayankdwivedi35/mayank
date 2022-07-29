@@ -17,8 +17,8 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    $u1 = $_POST['u1'];
-    $p1 = $_POST['p1'];
+    $number = $_POST['number'];
+    $pass = $_POST['pass'];
     // checking username and password
     $servername = "localhost";
     $username = "root";
@@ -26,15 +26,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $database = "rento";
     $conn = mysqli_connect($servername, $username, $password, $database);
 
-    $sql = "SELECT * FROM `account` WHERE phone='$u1' AND password='$p1'";
+    $sql = "SELECT * FROM `account` WHERE phone='$number' AND password='$pass'";
     $result = mysqli_query($conn, $sql);
     $num = mysqli_num_rows($result);
 
     if ($num === 1) {
         session_start();
-        $_SESSION['u1'] = $u1;
-        $_SESSION['p1'] = $p1;
-        header("location: ./dashboard.php");
+        $_SESSION['number'] = $number;
+        $_SESSION['pass'] = $password;
+        header("location: http://localhost/site/");
     } else {
         echo "
          <div id='msg'>
@@ -45,8 +45,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 ?>
             <h1>Login</h1>
-            <input type="number" placeholder="Phone Number" name="u1" autocomplete="off" />
-            <input type="password" placeholder="Password" name="p1" />
+            <input type="number" placeholder="Phone Number" name="number" autocomplete="off" />
+            <input type="password" placeholder="Password" name="pass" />
             <button type="submit">Login</button>
 
             <div class="login_footer">

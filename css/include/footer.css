@@ -1,0 +1,42 @@
+footer {
+    background: #000;
+    width: 100%;
+    padding: 2rem 10%;
+    color: #fff;
+}
+
+.logo-white {
+    font-size: 2rem;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+@media screen and (min-width: 800px) {
+    .footer-content {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+footer .social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #333;
+    padding: 1rem;
+}
+
+footer .social svg {
+    height: 30px;
+    width: 30px;
+    fill: #fff;
+    margin: 0 0.5rem;
+}
+
+footer .copyright {
+    text-align: center;
+}
