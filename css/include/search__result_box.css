@@ -1,0 +1,43 @@
+.result{
+    max-height: 95px;
+    overflow: scroll;
+}
+.result p {
+    margin: 0;
+    padding: 7px 10px;
+    border: 1px solid #CCCCCC;
+    border-top: none;
+    cursor: pointer;
+}
+.result h5 {
+    margin: 0;
+    padding: 7px 10px;
+    border: 1px solid #CCCCCC;
+    border-top: none;
+    cursor: pointer;
+}
+.result p:hover {
+    background: #f6f4f4;
+    color: purple;
+}
+/* width */
+.result::-webkit-scrollbar {
+    width: 2px;
+    background: none;
+    display: none;
+  }
+  
+  /* Track */
+  .result::-webkit-scrollbar-track {
+    background: none;
+  }
+   
+  /* Handle */
+  .result::-webkit-scrollbar-thumb {
+    background: none;
+  }
+  
+  /* Handle on hover */
+  .result::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }

@@ -2,10 +2,9 @@
 
 session_start();
 if (!isset($_SESSION['number'])) {
-    $login_status = "False"; 
+    $login_status = "False";
     // header("location: login.php");
-}
-else{
+} else {
     $login_status = "True";
 }
 ?>
@@ -22,9 +21,11 @@ else{
     <link rel="stylesheet" type="text/css" href="css//include/color.css" id="color-change">
     <link rel="stylesheet" type="text/css" href="fonts/flaticon/flaticon.css">
     <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/include/search__result_box.css">
     <!--	Title
 	=========================================================-->
     <title>Homex - Real Estate Template</title>
+
 </head>
 
 <body>
@@ -43,15 +44,15 @@ else{
         <div class="navbar">
             <div class="logo">NB</div>
 
-            <div class="search-btn">
-                <div class="btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                        <!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. -->
-                        <path d="M500.3 443.7l-119.7-119.7c27.22-40.41 40.65-90.9 33.46-144.7C401.8 87.79 326.8 13.32 235.2 1.723C99.01-15.51-15.51 99.01 1.724 235.2c11.6 91.64 86.08 166.7 177.6 178.9c53.8 7.189 104.3-6.236 144.7-33.46l119.7 119.7c15.62 15.62 40.95 15.62 56.57 0C515.9 484.7 515.9 459.3 500.3 443.7zM79.1 208c0-70.58 57.42-128 128-128s128 57.42 128 128c0 70.58-57.42 128-128 128S79.1 278.6 79.1 208z" />
-                    </svg>
-                    <span>Search</span>
-                </div>
-            </div>
+            <!-- <div class="search-btn"> -->
+            <!-- <div class="btn"> -->
+            <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"> -->
+            <!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. -->
+            <!-- <path d="M500.3 443.7l-119.7-119.7c27.22-40.41 40.65-90.9 33.46-144.7C401.8 87.79 326.8 13.32 235.2 1.723C99.01-15.51-15.51 99.01 1.724 235.2c11.6 91.64 86.08 166.7 177.6 178.9c53.8 7.189 104.3-6.236 144.7-33.46l119.7 119.7c15.62 15.62 40.95 15.62 56.57 0C515.9 484.7 515.9 459.3 500.3 443.7zM79.1 208c0-70.58 57.42-128 128-128s128 57.42 128 128c0 70.58-57.42 128-128 128S79.1 278.6 79.1 208z" />
+                    </svg> -->
+            <!-- <span>Search</span> -->
+            <!-- </div> -->
+            <!-- </div>  -->
 
             <div class="menu">
                 <!-- ==========================Menu Button===================== -->
@@ -60,21 +61,21 @@ else{
                         <!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
                         <path d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z" />
                     </svg>
-                    <span>                    <?php
-if($login_status == "True"){
-    echo "Your name";
-}else{
-    echo "Account";
-}
+                    <span> <?php
+                            if ($login_status == "True") {
+                                echo "Your name";
+                            } else {
+                                echo "Account";
+                            }
 
-?></span>
+                            ?></span>
                 </div>
                 <div class="space"></div>
                 <!-- =======================Menu List===================== -->
                 <div class="menu-list">
                     <?php
-if($login_status == "True"){
-    echo "
+                    if ($login_status == "True") {
+                        echo "
     <ul>
     <a href='#'><li>Home</li></a>
     <a href='#'><li>Post +</li></a>
@@ -82,17 +83,17 @@ if($login_status == "True"){
     <a href='./product_ctr/logout.php'><li>Logout</li></a>
 </ul>
     ";
-}else{
-    echo "
+                    } else {
+                        echo "
     <ul>
     <a href='product_ctr/login.php'><li>Login</li></a>
     <a href='#'><li>Regester</li></a>
     <a href='#'><li>Search</li></a>
 </ul>
     ";
-}
+                    }
 
-?>
+                    ?>
                 </div>
             </div>
         </div>
@@ -108,12 +109,15 @@ if($login_status == "True"){
                         <div class="col-lg-12">
                             <div class="text-white">
                                 <h1 class="mb-4"><span class="text-primary">Find</span><br>
-                                    Your dream house</h1>
+                                    Your dream place</h1>
                                 <form method="post" action="propertygrid.php">
                                     <div class="row">
                                         <div class="col-md-8 col-lg-6">
                                             <div class="form-group">
-                                                <input type="text" class="form-control" name="city" placeholder="Enter City or Enter State" required>
+                                                <div class="search-box">
+                                                    <input type="text" autocomplete="off" autofocus="on" placeholder="City, Area, Town, location" class="form-control" name="address" required="required" value="" />
+                                                    <div class="result"></div>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="col-md-6 col-lg-2">
@@ -130,9 +134,9 @@ if($login_status == "True"){
                                                 <select class="form-control" name="type">
                                                     <option value="">All Type</option>
                                                     <option value="">Room</option>
-                                                    <option value="appartment">peing guist</option>
                                                     <option value="flat">Flat</option>
                                                     <option value="bunglow">Hostel</option>
+                                                    <option value="appartment">Paying Guest</option>
                                                 </select>
                                             </div>
                                         </div>
@@ -462,6 +466,31 @@ if($login_status == "True"){
     <script src="js/validate.js"></script>
     <script src="js/jquery.cookie.js"></script>
     <script src="js/custom.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.search-box input[type="text"]').on("keyup input", function() {
+                /* Get input value on change */
+                var inputVal = $(this).val();
+                var resultDropdown = $(this).siblings(".result");
+                if (inputVal.length) {
+                    $.get("backend-search.php", {
+                        term: inputVal
+                    }).done(function(data) {
+                        // Display the returned data in browser
+                        resultDropdown.html(data);
+                    });
+                } else {
+                    resultDropdown.empty();
+                }
+            });
+
+            // Set search input value on click of result item
+            $(document).on("click", ".result p", function() {
+                $(this).parents(".search-box").find('input[type="text"]').val($(this).text());
+                $(this).parent(".result").empty();
+            });
+        });
+    </script>
 </body>
 
 </html>
