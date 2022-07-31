@@ -59,7 +59,7 @@
                         $gen = $_POST['gen'];
                         echo "<option value='$gen'>$gen</option>";
                     } ?>
-                    <option value="All gander">All gender</option>
+                    <option value="Students">Students</option>
                     <option value="Boys">Boys</option>
                     <option value="Girls">Girls</option>
                 </select>

@@ -31,13 +31,13 @@ if (!isset($_SESSION['number'])) {
 <body>
 
     <!--	Page Loader  -->
-    <div class="page-loader position-fixed z-index-9999 w-100 bg-white vh-100">
+    <!-- <div class="page-loader position-fixed z-index-9999 w-100 bg-white vh-100">
         <div class="d-flex justify-content-center y-middle position-relative">
             <div class="spinner-border" role="status">
                 <span class="sr-only">Loading...</span>
             </div>
         </div>
-    </div>
+    </div> -->
     <!--	Page Loader  -->
     <header>
         <!-- ==============================Navbar Started================ -->
@@ -110,7 +110,7 @@ if (!isset($_SESSION['number'])) {
                             <div class="text-white">
                                 <h1 class="mb-4"><span class="text-primary">Find</span><br>
                                     Your dream place</h1>
-                                <form method="post" action="propertygrid.php">
+                                <form method="post" action="./search/">
                                     <div class="row">
                                         <div class="col-md-8 col-lg-6">
                                             <div class="form-group">
@@ -122,24 +122,27 @@ if (!isset($_SESSION['number'])) {
                                         </div>
                                         <div class="col-md-6 col-lg-2">
                                             <div class="form-group">
-                                                <select class="form-control" name="st">
-                                                    <option value="">Students</option>
-                                                    <option value="rent">Boys</option>
-                                                    <option value="sale">Girls</option>
+                                                <select class="form-control" name="gen">
+                                                    <option value="students">Students</option>
+                                                    <option value="Boys">Boys</option>
+                                                    <option value="Girls">Girls</option>
                                                 </select>
                                             </div>
                                         </div>
                                         <div class="col-md-6 col-lg-2">
                                             <div class="form-group">
-                                                <select class="form-control" name="type">
-                                                    <option value="">All Type</option>
-                                                    <option value="">Room</option>
+                                                <select class="form-control" name="room">
+                                                    <option value="All Type">All rooms</option>
+                                                    <option value="pg">PG</option>
+                                                    <option value="Room">Room</option>
+                                                    <option value="hostel">Hostel</option>
                                                     <option value="flat">Flat</option>
-                                                    <option value="bunglow">Hostel</option>
-                                                    <option value="appartment">Paying Guest</option>
                                                 </select>
                                             </div>
                                         </div>
+                                        <select name="price" id="price" style="display: none;">
+                                            <option value="All price">All price range</option>
+                                        </select>
 
                                         <div class="col-md-4 col-lg-2">
                                             <div class="form-group">
