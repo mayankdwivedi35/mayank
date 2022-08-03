@@ -41,10 +41,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <body>
     <form action="login.php" method="POST">
-        <div class="close-btn">-</div>
         <div class="login_box">
             <h1>Login</h1>
-            <input type="number" placeholder="Phone Number" name="u1" autocomplete="off" />
+            <input type="text" placeholder="Phone Number" name="u1" autocomplete="off" />
             <input type="password" placeholder="Password" name="p1" />
             <button type="submit">Login</button>
 
