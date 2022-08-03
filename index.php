@@ -78,8 +78,8 @@ if (!isset($_SESSION['number'])) {
                         echo "
     <ul>
     <a href='#'><li>Home</li></a>
-    <a href='#'><li>Post +</li></a>
-    <a href='#'><li>Account</li></a>
+    <a href='product_ctr/post.php'><li>Post +</li></a>
+    <a href='product_ctr/dashboard.php'><li>Account</li></a>
     <a href='./product_ctr/logout.php'><li>Logout</li></a>
 </ul>
     ";

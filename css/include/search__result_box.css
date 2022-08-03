@@ -1,6 +1,24 @@
 .result{
-    max-height: 95px;
-    overflow: scroll;
+    max-height: 200px;
+    overflow-x: none;
+    overflow-y: auto;
+}
+@media screen and (min-width: 800px) {
+  .result{
+    max-height: 180px;
+}
+}
+.search-box{
+  position: relative;
+}
+.search-box div{
+  position: absolute;
+  top: 50px;
+  left: 0%;
+  width: 100%;
+  background: white;
+  color: black;
+  z-index: 9999;
 }
 .result p {
     margin: 0;
@@ -14,7 +32,9 @@
     padding: 7px 10px;
     border: 1px solid #CCCCCC;
     border-top: none;
-    cursor: pointer;
+    font-weight: 100;
+    cursor:auto;
+    font-size: 16px;
 }
 .result p:hover {
     background: #f6f4f4;
@@ -22,19 +42,16 @@
 }
 /* width */
 .result::-webkit-scrollbar {
-    width: 2px;
-    background: none;
-    display: none;
+    width: 5px;
   }
   
   /* Track */
   .result::-webkit-scrollbar-track {
-    background: none;
   }
    
   /* Handle */
   .result::-webkit-scrollbar-thumb {
-    background: none;
+    background-color: black;
   }
   
   /* Handle on hover */
