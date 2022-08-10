@@ -9,8 +9,6 @@
 }
 
 body {
-  background: linear-gradient(to bottom right, #333, #121212);
-  background-attachment: fixed;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -87,7 +85,7 @@ input.invalid {
 button {
   border: none;
   background: #7b38d8;
-  border-radius: 40px;
+  border-radius: 8px;
   color: #fff;
   cursor: pointer;
   width: 100%;
@@ -123,19 +121,5 @@ button:hover {
   #regForm{
     background: transparent;
     width: 100%;
-  }
-
-  h1{
-    color: #fff;
-  }
-
-  .tab h3{
-    color: #ccc;
-  }
-
-  input{
-    background: #333;
-    color: #fff;
-    border: 1px solid #333;
   }
 }

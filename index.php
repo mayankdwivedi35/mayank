@@ -42,7 +42,7 @@ if (!isset($_SESSION['number'])) {
     <header>
         <!-- ==============================Navbar Started================ -->
         <div class="navbar">
-            <div class="logo">NB</div>
+            <div class="logo">Rento</div>
 
             <!-- <div class="search-btn"> -->
             <!-- <div class="btn"> -->
@@ -115,7 +115,7 @@ if (!isset($_SESSION['number'])) {
                                         <div class="col-md-8 col-lg-6">
                                             <div class="form-group">
                                                 <div class="search-box">
-                                                    <input type="text" autocomplete="off" autofocus="on" placeholder="City, Area, Town, location" class="form-control" name="address" required="required" value="" />
+                                                    <input type="text" autocomplete="off" autofocus="off" placeholder="City, Area, Town, location" class="form-control" name="address" required="required" value="" />
                                                     <div class="result"></div>
                                                 </div>
                                             </div>
@@ -229,7 +229,7 @@ if (!isset($_SESSION['number'])) {
 
                                             <div class="col-md-6 col-lg-4">
                                                 <div class="featured-thumb hover-zoomer mb-4">
-                                                    <div class="overlay-black overflow-hidden position-relative"> <img src="admin/property/<?php echo $row['18']; ?>" alt="pimage">
+                                                    <div class="overlay-black overflow-hidden position-relative"> <img src="product_ctr/pro_image/2.jpeg" alt="pimage">
                                                         <div class="featured bg-primary text-white">New</div>
                                                         <div class="sale bg-secondary text-white text-capitalize">For <?php echo $row['5']; ?></div>
                                                         <div class="price text-primary"><b>$<?php echo $row['13']; ?> </b><span class="text-white"><?php echo $row['12']; ?> Sqft</span></div>

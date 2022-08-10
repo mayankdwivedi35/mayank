@@ -7,12 +7,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="product_css/login.css">
-    <title>Login to rento</title>
+    <title>bahar walaLogin to rento</title>
 </head>
 
 <body>
     <form action="login.php" method="POST">
-        <div class="close-btn">-</div>
         <div class="login_box">
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -45,13 +44,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 ?>
             <h1>Login</h1>
-            <input type="number" placeholder="Phone Number" name="number" autocomplete="off" />
+            <input type="text" placeholder="Phone Number" maxlength="10" name="number" autocomplete="off" />
             <input type="password" placeholder="Password" name="pass" />
             <button type="submit">Login</button>
 
             <div class="login_footer">
-                <a href="#">Help?</a>
-                <a href="#">Forgot password ?</a>
+                <a href="#">Regester ?</a>
+                <a href="#">Forgot ?</a>
             </div>
 
         </div>

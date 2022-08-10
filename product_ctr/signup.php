@@ -64,21 +64,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </div>
 
     <div class="tab">
-      <h3>Contact Info: </h3>
-      <div class="search-box">
-        <input type="text" autocomplete="off" autofocus="on" oninput="this.className = ''" placeholder="Phone..." class="input" name="phone" maxlength="10" />
-        <div class="result"></div>
-      </div>
-      <input placeholder="E-mail..." oninput="this.className = ''" name="email">
-    </div>
-
-    <div class="tab">
       <h3>Address: </h3>
       <input placeholder="Area name" oninput="this.className = ''" name="add1" />
       <input placeholder="City name" oninput="this.className = ''" name="add2" />
       <input placeholder="Landmark" oninput="this.className = ''" name="add3" />
       <input placeholder="State" value="Chhattisgarh" oninput="this.className = ''" name="state" />
       <input placeholder="Pin code" oninput="this.className = ''" name="pin" />
+    </div>
+
+    <div class="tab">
+      <h3>Contact Info: </h3>
+      <div class="search-box">
+        <input type="text" autocomplete="off" autofocus="on" oninput="this.className = ''" placeholder="Phone..." class="input" name="phone" maxlength="10" />
+        <div class="result"></div>
+      </div>
+      <input placeholder="E-mail..." oninput="this.className = ''" name="email">
     </div>
 
     <div class=" tab">
