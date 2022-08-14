@@ -21,6 +21,8 @@ if(isset($_REQUEST["term"])){
         }  
         else {
             echo "<h5>No matches found</h5>";
+            // storing word to database 
+          
         }
 }
  
